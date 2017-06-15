@@ -41,13 +41,6 @@ before_reboot(){
   make
   sudo make install
   
-  echo "Getting ns-3"
-  cd ~
-  hg clone http://code.nsnam.org/ns-3.26
-  cd ns-3.26
-  ./waf configure --enable-examples --enable-sudo
-  ./waf --run="scratch-simulator"
-  
   echo "Removing files"
   cd ~
   rm linux-*.tar.gz
@@ -56,6 +49,16 @@ before_reboot(){
   sudo rm name_this_node.py
   sudo rm interfaces
   sudo rm rc.local
+  
+  echo "Getting ns-3"
+  cd ~
+  hg clone http://code.nsnam.org/ns-3.26
+  cd ns-3.26
+  ./waf configure --enable-examples --enable-sudo
+  ./waf --run="scratch-simulator"
+  
+  echo "Removing myself"
+  cd /var/tmp
   rm -- "$0"
 }
 
