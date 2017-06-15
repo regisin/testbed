@@ -1,7 +1,14 @@
 def main():
     # Sets static IP address of wlan0 in template file
     import os
-    node_number = 0
+    import argparse
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--node-id', type=int, help='the node id to rename the IP/hostname/etc [1-254]')
+    args = parser.parse_args()
+    node_id = args.node_id
+    node_number = node_id
+    
     while not 1 <= node_number <= 254: node_number = int(raw_input("What is the number of this node? [1-254]: "))
     ipath = os.path.realpath(os.path.join(os.sep,'etc','network','interfaces'))
     opath = os.path.realpath(os.path.join(os.sep,'etc','network','interfaces.new'))
