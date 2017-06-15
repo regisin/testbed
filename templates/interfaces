@@ -31,7 +31,7 @@ netmask 255.0.0.0
 
 auto wlan2
 allow-hotplug wlan2
-iface wlan1 inet static
+iface wlan2 inet static
 wireless-essid channelOne
 wireless-channel 1
 wireless-mode ad-hoc
