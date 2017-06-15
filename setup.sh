@@ -39,8 +39,17 @@ before_reboot(){
   wget https://raw.githubusercontent.com/regisin/testbed/master/name_this_node.py
   sudo python2.7 name_this_node.py
   
-  cd /var/tmp
+  echo "Getting ns-3"
+  cd ~
+  hg clone http://code.nsnam.org/ns-3.26
+  cd ns-3.26
+  ./waf configure --enable-examples --enable-sudo
+  ./waf --run="scratch-simulator"
+  
   echo "Removing files"
+  cd ~
+  rm linux-*.tar.gz
+  cd /var/tmp
   sudo rm -rf rtl*
   sudo rm name_this_node.py
   sudo rm interfaces
