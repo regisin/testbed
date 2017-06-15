@@ -41,9 +41,11 @@ before_reboot(){
   
   cd /var/tmp
   echo "Removing files"
+  rm -rf rtl*
   rm name_this_node.py
   rm interfaces
   rm rc.local
+  rm -- "$0"
 }
 
 before_reboot
