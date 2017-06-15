@@ -34,6 +34,8 @@ before_reboot(){
   sudo cp /var/tmp/interfaces /etc/network/interfaces
   wget https://raw.githubusercontent.com/regisin/testbed/master/templates/rc.local
   sudo cp /var/tmp/rc.local /etc/rc.local
+  wget https://raw.githubusercontent.com/regisin/testbed/master/templates/keyboard
+  sudo cp /var/tmp/keyboard /etc/default/keyboard
 
   echo "Renaming node, input required"
   wget https://raw.githubusercontent.com/regisin/testbed/master/name_this_node.py
