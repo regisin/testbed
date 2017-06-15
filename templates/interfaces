@@ -1,0 +1,39 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+#source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+iface eth0 inet manual
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+wireless-essid channelEleven
+wireless-channel 11
+wireless-mode ad-hoc
+address 10.0.11.{node_number}
+netmask 255.0.0.0
+
+auto wlan1
+allow-hotplug wlan1
+iface wlan1 inet static
+wireless-essid channelFour
+wireless-channel 4
+wireless-mode ad-hoc
+address 10.0.4.{node_number}
+netmask 255.0.0.0
+
+auto wlan2
+allow-hotplug wlan2
+iface wlan1 inet static
+wireless-essid channelOne
+wireless-channel 1
+wireless-mode ad-hoc
+address 10.0.1.{node_number}
+netmask 255.0.0.0
