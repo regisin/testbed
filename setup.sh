@@ -61,7 +61,7 @@ before_reboot(){
   
   echo "Getting ns-3"
   cd ~
-  hg clone http://code.nsnam.org/ns-3.26
+  git clone http://github.com/regisin/ns-3.26
   cd ns-3.26
   ./waf configure --enable-examples --enable-sudo
   ./waf --run="scratch-simulator"
