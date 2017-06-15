@@ -13,7 +13,7 @@ before_reboot(){
   sudo apt-get update
   
   echo "Removing wpa suplicant"
-  sudo apt-get remove -y wpasuplicant
+  sudo apt-get remove -y wpasupplicant
   
   echo "Installing dependencies"
   sudo apt-get install -y bc libncurses5-dev git mercurial tcpdump tshark
