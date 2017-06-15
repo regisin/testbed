@@ -33,7 +33,7 @@ before_reboot(){
   wget https://raw.githubusercontent.com/regisin/testbed/master/templates/interfaces
   sudo cp /var/tmp/interfaces /etc/network/interfaces
   wget https://raw.githubusercontent.com/regisin/testbed/master/templates/rc.local
-  sudo cp /var/tmp/rc.local /etc/network/rc.local
+  sudo cp /var/tmp/rc.local /etc/rc.local
 
   echo "Renaming node, input required"
   wget https://raw.githubusercontent.com/regisin/testbed/master/name_this_node.py
@@ -41,10 +41,10 @@ before_reboot(){
   
   cd /var/tmp
   echo "Removing files"
-  rm -rf rtl*
-  rm name_this_node.py
-  rm interfaces
-  rm rc.local
+  sudo rm -rf rtl*
+  sudo rm name_this_node.py
+  sudo rm interfaces
+  sudo rm rc.local
   rm -- "$0"
 }
 
