@@ -41,8 +41,8 @@ before_reboot(){
   cd /var/tmp
   wget https://raw.githubusercontent.com/regisin/testbed/master/templates/interfaces
   sudo cp /var/tmp/interfaces /etc/network/interfaces
-  wget https://raw.githubusercontent.com/regisin/testbed/master/templates/rc.local
-  sudo cp /var/tmp/rc.local /etc/rc.local
+  #wget https://raw.githubusercontent.com/regisin/testbed/master/templates/rc.local
+  #sudo cp /var/tmp/rc.local /etc/rc.local
   wget https://raw.githubusercontent.com/regisin/testbed/master/templates/keyboard
   sudo cp /var/tmp/keyboard /etc/default/keyboard
   
