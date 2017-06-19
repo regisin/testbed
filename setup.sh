@@ -61,7 +61,7 @@ before_reboot(){
   git clone http://github.com/regisin/ns-3.26
   cd ns-3.26
   ./waf configure --enable-examples --enable-sudo
-  ./waf --run="scratch-simulator"
+  ./waf
   
   echo "Removing myself"
   cd /var/tmp
