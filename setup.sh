@@ -55,6 +55,7 @@ before_reboot(){
   sudo rm -rf rtl*
   sudo rm name_this_node.py
   sudo rm interfaces
+  sudo rm keyboard
   
   echo "Getting ns-3"
   cd ~
