@@ -18,7 +18,7 @@ wireless-essid channelEleven
 wireless-channel 11
 wireless-mode ad-hoc
 address 10.0.11.{node_number}
-netmask 255.0.0.0
+netmask 255.255.255.0
 
 auto wlan1
 allow-hotplug wlan1
@@ -27,7 +27,7 @@ wireless-essid channelFour
 wireless-channel 4
 wireless-mode ad-hoc
 address 10.0.4.{node_number}
-netmask 255.0.0.0
+netmask 255.255.255.0
 
 auto wlan2
 allow-hotplug wlan2
@@ -36,4 +36,4 @@ wireless-essid channelOne
 wireless-channel 1
 wireless-mode ad-hoc
 address 10.0.1.{node_number}
-netmask 255.0.0.0
+netmask 255.255.255.0
